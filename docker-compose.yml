@@ -4,4 +4,8 @@ services:
     build: .
     network_mode: host # Required for nest mini connectivity
     restart: unless-stopped
-    env_file: .env
+    environment:
+      RING_REFRESH_TOKEN: $RING_REFRESH_TOKEN
+      RING_CAMERA_NAME: $RING_CAMERA_NAME
+      NEST_MINI_HOST: $NEST_MINI_HOST
+      CHIME_URL: $CHIME_URL
